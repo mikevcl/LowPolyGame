@@ -64,7 +64,8 @@ public class HandgunScriptLPFP : MonoBehaviour
 	private bool isWalking;
 	//Check if inspecting weapon
 	private bool isInspecting;
-	//--------------------------------------------------------------------------------
+
+	//----------------------------michael's code----------------------------------------------------
 
 	//check if knifing
 	private bool isKnifing;
@@ -80,7 +81,7 @@ public class HandgunScriptLPFP : MonoBehaviour
 
 	private int timer;
 
-	//--------------------------------------------------------------------------------
+	//-----------------------------------------------------------------------------------------------
 
 	//How much ammo is currently left
 	private int currentAmmo;

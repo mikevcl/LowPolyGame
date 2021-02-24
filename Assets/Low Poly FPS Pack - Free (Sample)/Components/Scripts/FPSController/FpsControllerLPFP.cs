@@ -86,7 +86,14 @@ namespace FPSControllerLPFP
             Cursor.lockState = CursorLockMode.Locked;
             ValidateRotationRestriction();
         }
-			
+        /*
+        private int Damage()
+        {
+
+            Health -= damageSource;
+            return Health;
+        }
+        */
         private Transform AssignCharactersCamera()
         {
             var t = transform;
