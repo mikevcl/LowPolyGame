@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace FPSControllerLPFP
 {
+
     /// Manages a first person character
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(CapsuleCollider))]
