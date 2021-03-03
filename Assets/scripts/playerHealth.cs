@@ -5,33 +5,45 @@ using UnityEngine.UI;
 
 public class playerHealth : MonoBehaviour
 {
-    public float healthCurrent;
-    public float healthMax = 100;
-
+    //public float healthCurrent;
+    //public float healthMax = 100;
     public Slider healthBar;
-    private Animator animator;
+    healthSystem playerHP = new healthSystem(100);
+
+
     // Start is called before the first frame update
     void Start()
     {
-        healthCurrent = healthMax;
-        healthBar.value = healthCurrent;
-        healthBar.value = healthMax;
+        healthBar.value = playerHP.getHealth();
+        //healthBar.value = healthCurrent;
+
+        //Debug.Log("Health:" + playerHP.getHealth());
+        //playerHP.Damage(30);
+        //Debug.Log("Health:" + playerHP.getHealth());
+        //playerHP.Heal(10);
+        //Debug.Log("Health:" + playerHP.getHealth());
+
+        //playerHP.Damage(10);
+        //Debug.Log("Health:" + playerHP.getHealth());
+
     }
 
     // Update is called once per frame
     void Update()
     {	
 		// Testing the healthbar function, press space to get 10 dmg
-         /*if ( Input.GetKeyDown( KeyCode.Space ) )
+         if ( Input.GetKeyDown( KeyCode.Space ) )
         {
-            sendDamage(10);
+            playerHP.Damage(10);
+            healthBar.value = playerHP.getHealth();
+            Debug.Log("Health:" + playerHP.getHealth());
         }
-		*/
+
     }
 
-    public void sendDamage(float damageValue)
-    {
-        healthCurrent = healthCurrent - damageValue;
-        healthBar.value = healthCurrent;
-    }
+    //public void takeDamage(float damageValue)
+    //{
+    //    healthCurrent = healthCurrent - damageValue;
+    //    healthBar.value = healthCurrent;
+    //}
 }
