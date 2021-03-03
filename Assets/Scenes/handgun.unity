@@ -1533,8 +1533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5cff72c56ee7742a53cdd17c35c821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCurrent: 100
-  healthMax: 100
   healthBar: {fileID: 877965535}
 --- !u!4 &305060495 stripped
 Transform:
@@ -6020,7 +6018,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
