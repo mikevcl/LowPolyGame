@@ -30,19 +30,19 @@ public class TargetScript : MonoBehaviour {
 		//If the target is hit
 		if (isHit == true) 
 		{
-			if (routineStarted == false) 
-			{
-				//Animate the target "down"
-				gameObject.GetComponent<Animation> ().Play("target_down");
+			//if (routineStarted == false) 
+			//{
+			//	//Animate the target "down"
+			//	gameObject.GetComponent<Animation> ().Play("target_down");
 
-				//Set the downSound as current sound, and play it
-				audioSource.GetComponent<AudioSource>().clip = downSound;
-				audioSource.Play();
+			//	//Set the downSound as current sound, and play it
+			//	audioSource.GetComponent<AudioSource>().clip = downSound;
+			//	audioSource.Play();
 
-				//Start the timer
-				StartCoroutine(DelayTimer());
-				routineStarted = true;
-			} 
+			//	//Start the timer
+			//	StartCoroutine(DelayTimer());
+			//	routineStarted = true;
+			//} 
 		}
 	}
 

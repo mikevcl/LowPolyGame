@@ -31,6 +31,10 @@ public class manZombieHealth : MonoBehaviour
         zombieHealth.Damage(damage);
         Debug.Log("Zombie health:" + zombieHealth.getHealth());
         healthBar.value = zombieHealth.getHealth();
+        if (zombieHealth.getHealth() == 0)
+        {
+            Destroy(gameObject,3);
+        }
     }
 
 }
