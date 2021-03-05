@@ -53,7 +53,7 @@ public class BulletScript : MonoBehaviour {
 		if (collision.transform.tag == "Target") 
 		{
 			//Toggle "isHit" on target object
-			//collision.transform.gameObject.GetComponent<TargetScript>().isHit = true;
+			collision.transform.gameObject.GetComponent<TargetScript>().isHit = true;
             collision.gameObject.GetComponent<manZombieHealth>().takeDamage(10);
 			//Destroy bullet object
 			Destroy(gameObject);
