@@ -1,7 +1,7 @@
 # LowPolyGame
  
 <<<<<<< HEAD
-This a project that is currently in development
+COVZ
 =======
-This is an edit to the healthSystem to test pushing 
+Due to poor social distancing, Covid-Z has swiftly taken over the world. Now our MC, Mike, has to find his way around without falling victim to the coughing zombies. 
 >>>>>>> healthSystem
