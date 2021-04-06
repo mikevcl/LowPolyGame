@@ -33,7 +33,8 @@ public class manZombieHealth : MonoBehaviour
         healthBar.value = zombieHealth.getHealth();
         if (zombieHealth.getHealth() == 0)
         {
-            Destroy(gameObject,3);
+            Destroy(gameObject,0);
+
         }
     }
 

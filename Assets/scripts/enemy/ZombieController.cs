@@ -7,12 +7,13 @@ public class ZombieController : MonoBehaviour
 {
 
 	public float lookRadius = 10f;
-
+	Animator animator;
 	Transform target;
 	NavMeshAgent agent;
 
 	void Start()
 	{
+		animator = GetComponent<Animator>();
 		target = FindingPlayer.instance.player.transform;
 		agent = GetComponent<NavMeshAgent>();
 	}
@@ -20,18 +21,41 @@ public class ZombieController : MonoBehaviour
 	void Update()
 	{
 		float distance = Vector3.Distance(target.position, transform.position);
-	
-		if (distance <= lookRadius)
+
+		//if player is inside look radius and isn't in attacking distance then run
+		if(distance > lookRadius)
+			animator.SetBool("isRunning", true);
+		if (distance <= lookRadius && distance>agent.stoppingDistance)
 		{
-			agent.SetDestination(target.position);
-
-			if (distance <= agent.stoppingDistance)
-			{
-				//put attacking here
-				//LookAtPlayer();
-			}
+			animator.SetBool("isRunning", true);
+			distance = Vector3.Distance(target.position, transform.position);
+			if (distance > lookRadius)
+				agent.SetDestination(transform.position);
+			else
+				agent.SetDestination(target.position);
+			Debug.Log("running true");
 		}
-
+		//else running is false 
+		else
+		{
+			animator.SetBool("isRunning", false);
+			Debug.Log("running false");
+		}
+		//if player is within attacking distance then attack
+		if (distance <= (agent.stoppingDistance + .3))
+		{
+			
+			LookAtPlayer();
+			//put damage to player from zombie here
+			animator.SetBool("isAttacking", true);
+			Debug.Log("attacking true");
+		}
+		// else set attacking to false
+		else
+		{
+			animator.SetBool("isAttacking", false);
+			Debug.Log("attacking false");
+		}
 	}
 
 	void LookAtPlayer()

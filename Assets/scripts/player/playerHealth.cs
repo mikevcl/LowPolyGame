@@ -19,12 +19,13 @@ public class playerHealth : MonoBehaviour
     void Update()
     {	
 		// Testing the healthbar function, press space to get 10 dmg
-        // if ( Input.GetKeyDown( KeyCode.Space ) )
-        //{
-        //    playerHP.Damage(10);
-        //    healthBar.value = playerHP.getHealth();
-        //    Debug.Log("Health:" + playerHP.getHealth());
-        //}
-
+        /*
+         if ( Input.GetKeyDown( KeyCode.Space ) )
+        {
+            playerHP.Damage(10);
+            healthBar.value = playerHP.getHealth();
+            Debug.Log("Health:" + playerHP.getHealth());
+        }
+        */
     }
 }
