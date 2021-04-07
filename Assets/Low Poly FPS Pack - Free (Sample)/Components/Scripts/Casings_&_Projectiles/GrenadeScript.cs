@@ -94,7 +94,7 @@ public class GrenadeScript : MonoBehaviour {
 				hit.gameObject.GetComponent<Animation> ().Play("target_down");
 				//Toggle "isHit" on target object
 				hit.gameObject.GetComponent<TargetScript>().isHit = true;
-                hit.gameObject.GetComponent<manZombieHealth>().takeDamage(10);
+                hit.gameObject.GetComponent<ZombieController>().takeDamage(10);
             }
 
 			//If the explosion hits "ExplosiveBarrel" tag
