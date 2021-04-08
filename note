@@ -1,0 +1,4 @@
+1. Give zombie global range when shot at or see the player they will keep chasing
+2. add zombie damage
+3. Issue we are having is the zombies all die if one of them dies. Seems the script is used by all objects
+
